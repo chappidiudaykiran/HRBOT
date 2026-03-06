@@ -28,7 +28,7 @@ export default function ServicesSection() {
   }, [companies, query]);
 
   return (
-    <section className="bg-[#101010] px-5 py-[110px] md:px-10">
+    <section className="three-section bg-[#101010]/45 px-5 py-[110px] md:px-10">
       <div className="mx-auto max-w-[1200px]">
         <p className="mb-4 text-[11px] font-semibold uppercase tracking-[2.5px] text-[#c8ff00]">Company Directory</p>
         <h2 className="mb-5 font-['Syne'] text-[clamp(28px,4vw,52px)] font-extrabold leading-[1.1] tracking-[-1.5px]">Type and Search Companies</h2>
@@ -41,7 +41,7 @@ export default function ServicesSection() {
             onChange={(event) => setQuery(event.target.value)}
             className="flex-1 rounded-lg border border-white/15 bg-[#121212] px-3.5 py-2.5 text-[13px] text-white outline-none placeholder:text-white/55"
           />
-          <button type="button" className="rounded-lg bg-[#c8ff00] px-[18px] py-2.5 font-['Syne'] text-[13px] font-bold text-black transition hover:-translate-y-px">Search</button>
+          <button type="button" className="three-button rounded-lg bg-[#c8ff00] px-[18px] py-2.5 font-['Syne'] text-[13px] font-bold text-black transition hover:-translate-y-px">Search</button>
         </div>
         <div className="mt-[60px] grid grid-cols-1 gap-5 md:grid-cols-2">
           {filteredCompanies.length > 0 ? (
@@ -49,7 +49,7 @@ export default function ServicesSection() {
               <button
                 type="button"
                 onClick={() => navigate(`/chat/${company.value}`)}
-                className="rounded-[18px] border border-white/10 bg-[#141414] p-9 text-left transition duration-300 hover:-translate-y-1 hover:border-[#c8ff00]/30 hover:shadow-[0_22px_44px_rgba(0,0,0,0.36)]"
+                className="three-surface rounded-[18px] border border-white/10 bg-[#141414]/72 p-9 text-left transition duration-300 hover:-translate-y-1 hover:border-[#c8ff00]/30 hover:shadow-[0_22px_44px_rgba(0,0,0,0.36)]"
                 key={company.name}
               >
                 <div className="mb-6 h-16 w-16 overflow-hidden rounded-xl border border-[#c8ff00]/20 bg-white">
@@ -61,7 +61,7 @@ export default function ServicesSection() {
               </button>
             ))
           ) : (
-            <div className="rounded-[18px] border border-white/10 bg-[#141414] p-9">
+            <div className="three-surface rounded-[18px] border border-white/10 bg-[#141414]/72 p-9">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8ff00]/20 bg-[#c8ff00]/10 text-[22px]">🔎</div>
               <h3 className="mb-3 font-['Syne'] text-[20px] font-bold">No companies found</h3>
               <p className="text-[14px] leading-[1.7] text-white/60">Try a different keyword to find the company and continue with chatbot support.</p>

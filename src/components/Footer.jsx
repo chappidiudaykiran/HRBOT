@@ -4,15 +4,15 @@ export default function Footer() {
   const quickLinks = ["Home", "Onboarding", "Policies", "FAQ", "About"];
 
   return (
-    <footer className="border-t border-white/10 bg-[#0a0a0a] px-5 pb-10 pt-[60px] md:px-10">
+    <footer className="three-section border-t border-white/10 bg-[#0a0a0a]/40 px-5 pb-10 pt-[60px] md:px-10">
       <div className="mx-auto max-w-[1200px]">
         <div className="mb-[50px] grid grid-cols-1 gap-10 md:grid-cols-[1.5fr_1fr_1fr] md:gap-[60px]">
-          <div>
+          <div className="three-surface rounded-2xl p-5 md:p-6">
             <Link to="/" className="font-['Syne'] text-[22px] font-extrabold tracking-[-0.5px] text-white">HR<span className="text-[#c8ff00]">Bot</span></Link>
             <p className="my-4 max-w-[280px] text-[14px] leading-[1.7] text-white/60">HumanResourcesOnboarding&Policy ExplainerBot helps teams deliver faster onboarding and consistent policy guidance.</p>
-            <a href="#" className="inline-block rounded-[10px] bg-[#c8ff00] px-6 py-3 font-['Syne'] text-[13px] font-bold text-black shadow-[0_14px_34px_rgba(200,255,0,0.28)] transition hover:-translate-y-0.5">Get Started</a>
+            <a href="#" className="three-button inline-block rounded-[10px] bg-[#c8ff00] px-6 py-3 font-['Syne'] text-[13px] font-bold text-black shadow-[0_14px_34px_rgba(200,255,0,0.28)] transition hover:-translate-y-0.5">Get Started</a>
           </div>
-          <div>
+          <div className="three-surface rounded-2xl p-5 md:p-6">
             <h4 className="mb-5 font-['Syne'] text-[14px] font-bold tracking-[0.5px]">Quick Links</h4>
             <ul className="flex list-none flex-col gap-3">
               {quickLinks.map((link) => (
@@ -30,11 +30,11 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="three-surface rounded-2xl p-5 md:p-6">
             <h4 className="mb-5 font-['Syne'] text-[14px] font-bold tracking-[0.5px]">Join our HR updates community</h4>
             <div className="mt-3 flex gap-2">
               <input type="email" placeholder="Your email" className="flex-1 rounded-lg border border-white/15 bg-[#121212] px-3.5 py-2.5 text-[13px] text-white outline-none placeholder:text-white/55" />
-              <button className="rounded-lg bg-[#c8ff00] px-[18px] py-2.5 font-['Syne'] text-[13px] font-bold text-black transition hover:-translate-y-px">Join</button>
+              <button className="three-button rounded-lg bg-[#c8ff00] px-[18px] py-2.5 font-['Syne'] text-[13px] font-bold text-black transition hover:-translate-y-px">Join</button>
             </div>
           </div>
         </div>

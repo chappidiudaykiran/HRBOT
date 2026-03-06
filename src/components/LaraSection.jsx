@@ -6,7 +6,7 @@ export default function LaraSection() {
   ];
 
   return (
-    <section className="bg-[#090909] px-5 py-[110px] md:px-10">
+    <section className="three-section bg-[#090909]/45 px-5 py-[110px] md:px-10">
       <div className="mx-auto max-w-[1200px]">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-20">
           <div>
@@ -18,9 +18,9 @@ export default function LaraSection() {
                 <li className="flex items-start gap-3 text-[15px] leading-[1.5] text-white/85" key={feature}><span className="mt-2 h-[7px] w-[7px] shrink-0 rounded-full bg-[#c8ff00]" />{feature}</li>
               ))}
             </ul>
-            <a href="#" className="inline-block rounded-[10px] bg-[#c8ff00] px-[30px] py-[15px] font-['Syne'] text-[15px] font-bold text-black shadow-[0_14px_34px_rgba(200,255,0,0.28)] transition hover:-translate-y-0.5">Learn About OnboardIQ</a>
+            <a href="#" className="three-button inline-block rounded-[10px] bg-[#c8ff00] px-[30px] py-[15px] font-['Syne'] text-[15px] font-bold text-black shadow-[0_14px_34px_rgba(200,255,0,0.28)] transition hover:-translate-y-0.5">Learn About OnboardIQ</a>
           </div>
-          <div className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#141414] p-9 shadow-[0_28px_60px_rgba(0,0,0,0.38)] before:pointer-events-none before:absolute before:-right-[60px] before:-top-[60px] before:h-[200px] before:w-[200px] before:bg-[radial-gradient(circle,rgba(200,255,0,0.1),transparent_70%)] before:content-['']">
+          <div className="three-surface relative overflow-hidden rounded-[20px] border border-white/10 bg-[#141414]/70 p-9 shadow-[0_28px_60px_rgba(0,0,0,0.38)] before:pointer-events-none before:absolute before:-right-[60px] before:-top-[60px] before:h-[200px] before:w-[200px] before:bg-[radial-gradient(circle,rgba(200,255,0,0.1),transparent_70%)] before:content-['']">
             <div className="mb-6 flex gap-1.5">
               <div className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
               <div className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />

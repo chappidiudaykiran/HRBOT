@@ -9,10 +9,78 @@
     box-sizing: border-box;
   }
 
+  :root {
+    color-scheme: dark;
+  }
+
   body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #090909;
+    background: #060607;
     color: #fff;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .app-shell {
+    position: relative;
+    min-height: 100vh;
+    isolation: isolate;
+    overflow-x: hidden;
+    background: radial-gradient(circle at 15% -10%, rgba(200, 255, 0, 0.1), transparent 35%), radial-gradient(circle at 85% 120%, rgba(0, 255, 204, 0.08), transparent 40%), #060607;
+  }
+
+  .app-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .webgl-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .webgl-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 40%, transparent 25%, rgba(6, 6, 7, 0.48) 70%, rgba(6, 6, 7, 0.88) 100%);
+  }
+
+  .three-surface {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(14px);
+    transform-style: preserve-3d;
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  }
+
+  .three-surface:hover {
+    transform: translateY(-6px) rotateX(3.5deg) rotateY(-2.5deg);
+    border-color: rgba(200, 255, 0, 0.35);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.62), 0 0 40px rgba(200, 255, 0, 0.14);
+  }
+
+  .three-button {
+    transform: translateZ(0);
+    box-shadow: 0 14px 28px rgba(200, 255, 0, 0.22), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .three-button:hover {
+    transform: translateY(-3px) translateZ(0);
+    box-shadow: 0 20px 38px rgba(200, 255, 0, 0.35), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .three-section {
+    position: relative;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.74), rgba(10, 10, 10, 0.55));
+    backdrop-filter: blur(2px);
   }
 }

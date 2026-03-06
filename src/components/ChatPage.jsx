@@ -171,9 +171,9 @@ export default function ChatPage() {
   }, [initialQuery]);
 
   return (
-    <div className="min-h-screen bg-[#090909] px-5 py-8 text-white md:px-10">
+    <div className="relative z-[1] min-h-screen bg-transparent px-5 py-8 text-white md:px-10">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-6 flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:flex-row md:items-center md:justify-between md:p-5">
+        <div className="three-surface mb-6 flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:flex-row md:items-center md:justify-between md:p-5">
           <div>
             <p className="text-[11px] uppercase tracking-[2px] text-[#c8ff00]">Selected Company</p>
             <h1 className="font-['Syne'] text-2xl font-bold md:text-3xl">{selectedCompanyLabel} HR Chatbot</h1>
@@ -203,7 +203,7 @@ export default function ChatPage() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
+        <div className="three-surface overflow-hidden rounded-2xl border border-white/10 bg-[#111111]/75">
           <div className="h-[62vh] space-y-3 overflow-y-auto p-4 md:p-6">
             {messages.map((message, index) => (
               <div
@@ -247,7 +247,7 @@ export default function ChatPage() {
                 type="button"
                 onClick={handleSend}
                 disabled={isLoading}
-                className="h-12 rounded-xl bg-[#c8ff00] px-6 font-['Syne'] text-[14px] font-bold text-black shadow-[0_12px_26px_rgba(200,255,0,0.25)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+                className="three-button h-12 rounded-xl bg-[#c8ff00] px-6 font-['Syne'] text-[14px] font-bold text-black shadow-[0_12px_26px_rgba(200,255,0,0.25)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isLoading ? "Sending..." : "Send"}
               </button>

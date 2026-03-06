@@ -36,7 +36,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pb-[90px] pt-[130px] text-center md:px-10">
+    <section className="three-section relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pb-[90px] pt-[130px] text-center md:px-10">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#090909] to-[#0f0f0f]" />
       <div className="pointer-events-none absolute -top-28 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full bg-[#c8ff00]/10 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-24 right-0 h-[360px] w-[560px] rounded-full bg-[#00ffcc]/10 blur-[130px]" />
@@ -45,7 +45,7 @@ export default function Hero() {
         Simplify <em className="not-italic text-[#c8ff00]">Employee Onboarding</em> and HR Policy Support
       </h1>
       <p className="relative mb-10 max-w-[640px] text-[17px] leading-[1.7] text-white/60">Your AI assistant answers policy questions instantly and guides employees through onboarding with consistent, approved information.</p>
-      <div className="relative mb-6 w-full overflow-hidden border-y border-white/10 bg-gradient-to-b from-white/[0.01] to-transparent py-6">
+      <div className="three-surface relative mb-6 w-full overflow-hidden rounded-2xl border-y border-white/10 bg-gradient-to-b from-white/[0.01] to-transparent py-6">
         <p className="mb-4 text-center text-[11px] uppercase tracking-[2px] text-white/60">Companies</p>
         <div className="overflow-hidden">
           <div className="flex w-max animate-marquee">
@@ -53,7 +53,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => handleCompanyCardClick(company.value)}
-                className="mx-3 flex min-w-[230px] items-center gap-4 rounded-2xl border border-white/10 bg-[#121212] px-5 py-4 text-left transition hover:-translate-y-0.5 hover:border-[#c8ff00]/40"
+                className="three-surface mx-3 flex min-w-[230px] items-center gap-4 rounded-2xl border border-white/10 bg-[#121212]/70 px-5 py-4 text-left transition hover:-translate-y-0.5 hover:border-[#c8ff00]/40"
                 key={`${company.value}-${index}`}
               >
                 <div className="h-14 w-14 overflow-hidden rounded-lg bg-white">
@@ -91,7 +91,7 @@ export default function Hero() {
           type="button"
           onClick={handleCompanySubmit}
           disabled={!matchedCompany}
-          className="h-12 rounded-xl bg-[#c8ff00] px-6 font-['Syne'] text-[14px] font-bold text-black shadow-[0_12px_26px_rgba(200,255,0,0.25)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+          className="three-button h-12 rounded-xl bg-[#c8ff00] px-6 font-['Syne'] text-[14px] font-bold text-black shadow-[0_12px_26px_rgba(200,255,0,0.25)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
         >
           Submit
         </button>
