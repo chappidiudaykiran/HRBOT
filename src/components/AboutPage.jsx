@@ -19,7 +19,7 @@ export default function AboutPage() {
               <h2 className="mb-4 font-['Syne'] text-2xl font-bold">The Problem</h2>
               <p className="text-white/80">Starting a new job is one of the most exciting moments of your career — but it can also be one of the most overwhelming. You've just received your offer letter, and suddenly you're buried under a 60-page employee handbook, waiting 3 days for HR to reply to a basic question, and expected to know every policy before you've even found your desk.</p>
               <p className="mt-4 text-white/80">Most companies haven't solved this. They hand you a document and hope for the best.</p>
-              <p className="mt-4 text-white/80">We thought there had to be a better way.</p>
+              <p className="mt-4 text-white/80">We thought there had to be a better way...</p>
             </article>
 
             <article className="three-surface rounded-2xl border border-white/10 bg-[#111111]/72 p-6 md:p-8">
